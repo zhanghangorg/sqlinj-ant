@@ -138,7 +138,6 @@ class Autoinj(object):
 # if __name__ == '__main__':
 # 	server = 'http://127.0.0.1:8775/'
 # 	target = 'http://192.168.48.124:8080/index/news'
-# 	#target = 'http://passport.youzu.com/payment/default/showContent/game_id/8/serviceProvider/rg_pay'
 # 	#target = 'http://127.0.0.1:8080/index/login'
 # 	data = "id=1"
 # 	cookies = ""
