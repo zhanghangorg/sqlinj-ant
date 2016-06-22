@@ -70,11 +70,7 @@ class Autoinj(object):
 		headers = {'Content-Type':'application/json'}
 		url = self.server + param.option_task_set
 		url = url.replace(param.taskid, self.taskid)
-		data = {
-				"user-agent":
-					'''Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2)
-				 		AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106'''
-				}
+		data = {}
 		if self.method == "POST":
 			data["data"] = self.data
 		if len(self.cookie)>1:
