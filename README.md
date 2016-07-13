@@ -24,6 +24,7 @@ python调用sqlmapapi遍历上一步收集的url进行测试，通过多节点�
  * redis
  * openresty 版本别太低
  * sqlmap
+
 ###2.配置准备
  * 安装redis
  * 安装openresty并添加proxy.conf 配置http代理服务器 修改proxy.conf中redis地址，确保redis的连接
@@ -32,9 +33,11 @@ python调用sqlmapapi遍历上一步收集的url进行测试，通过多节点�
  * 在扫描节点部署sqlmap并启动sqlmapapi的服务（多节点提高速度）
  * 调用preprocess.py 将要扫描的站点转移到db1下set中(原始请求数据保留在db0，db1作任务队列)
  * 通过console.py调用sqlmapapi进行扫描
+ `
   python console.py http://node1.com:8775
   python console.py http://node2.com:8775
   python console.py http://node2.com:8775
+`
   
 扫描结果将保存到db1中 key=sql.inj 
 
