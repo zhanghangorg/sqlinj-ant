@@ -12,11 +12,11 @@ python调用sqlmapapi遍历上一步收集的url进行测试，通过多节点�
 
 
 ##二、文件说明
--|____autoinj.py 			调用sqlmapapi提供的api进行sql注入测试 对存在注入漏洞的请求返回请求信息
--|____console.py 			主程序  获取用户参数调用autoinj进行注入测试
--|____param.py 				参数配置
--|____preprocess.py 			数据预处理程序 将redis中hash保存的请求信息以set形式保存到 待测试 key中
--|____proxy.conf 			nginx代理配置 记录http请求到redis
+1.|____autoinj.py 			调用sqlmapapi提供的api进行sql注入测试 对存在注入漏洞的请求返回请求信息
+2.|____console.py 			主程序  获取用户参数调用autoinj进行注入测试
+3.|____param.py 				参数配置
+4.|____preprocess.py 			数据预处理程序 将redis中hash保存的请求信息以set形式保存到 待测试 key中
+5.|____proxy.conf 			nginx代理配置 记录http请求到redis
 
 ###代理收集到得数据
  ![image](https://github.com/zhanghangorg/sqlinj-ant/blob/master/img/1.png)
