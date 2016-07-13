@@ -14,13 +14,11 @@ python调用sqlmapapi遍历上一步收集的url进行测试，通过多节点�
 .
 |____autoinj.py 			调用sqlmapapi提供的api进行sql注入测试 对存在注入漏洞的请求返回请求信息
 |____console.py 			主程序  获取用户参数调用autoinj进行注入测试
-|____main.py 				无用的
 |____param.py 				参数配置
 |____preprocess.py 			数据预处理程序 将redis中hash保存的请求信息以set形式保存到 待测试 key中
 |____proxy.conf 			nginx代理配置 记录http请求到redis
-|____spider.py 				没用的
 
-##三、使用说明
+##md三、使用说明
 1.环境要求
 python 2.7
 redis
