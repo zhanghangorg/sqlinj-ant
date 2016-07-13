@@ -1,16 +1,16 @@
 # sqlinj-ant
 
-一、程序说明
+##一、程序说明
 
 分布式、全覆盖、半自动化 sql注入扫描器
 
 解决问题：传统扫描器对post请求的无力，对登录后请求的无力，扫描效率低，覆盖效果差
 
-通过使用代理服务器主动提交的方式收集全部请求保存到redis中
-python调用sqlmapapi遍历上一步收集的url进行测试
+通过使用代理服务器主动提交的方式收集全部请求保存到redis中，可覆盖全部http接口
+python调用sqlmapapi遍历上一步收集的url进行测试，通过多节点部署sqlmap极大提高识别效率
 
 
-二、文件说明
+##二、文件说明
 .
 |____autoinj.py 			调用sqlmapapi提供的api进行sql注入测试 对存在注入漏洞的请求返回请求信息
 |____console.py 			主程序  获取用户参数调用autoinj进行注入测试
@@ -20,7 +20,7 @@ python调用sqlmapapi遍历上一步收集的url进行测试
 |____proxy.conf 			nginx代理配置 记录http请求到redis
 |____spider.py 				没用的
 
-三、使用说明
+##三、使用说明
 1.环境要求
 python 2.7
 redis
